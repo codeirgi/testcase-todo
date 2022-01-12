@@ -1,0 +1,29 @@
+html {
+    scroll-behavior: smooth;
+}
+
+main {
+    margin-bottom: 50px;
+}
+
+.title-head {
+    font-size: 36px;
+    font-weight: bolder;
+    text-align: center;
+    margin: 20px;
+}
+
+.list-task {
+    color: black;
+}
+.list-task:hover {
+    color: rgb(65, 65, 65);
+}
+
+.card .card-header {
+    border-bottom: unset;
+}
+
+.home-bottom span {
+    font-weight: bold;
+}
