@@ -34,6 +34,7 @@ Cards.Frame = ({ title, onCreate, children }) => {
                         height={14}
                         onClick={onCreate}
                         role="button"
+                        alt="plus"
                     />
                 )}
             </Card.Header>

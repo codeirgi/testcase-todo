@@ -68,13 +68,13 @@ export default class TodoContextProvider extends Component {
 
     handleUpdateStatus = (id) => {
         var dataUpdate = this.state.todoList.filter((item) => item.id !== id);
-        var dataBefore = this.state.todoList.filter((item) => item.id == id);
+        var dataBefore = this.state.todoList.filter((item) => item.id === id);
 
         dataUpdate.push({
             id: id,
             title: dataBefore[0].title,
             description: dataBefore[0].description,
-            status: dataBefore[0].status == 0 ? 1 : 0,
+            status: dataBefore[0].status === 0 ? 1 : 0,
             createdAt: this.getNewDate(),
         })
 

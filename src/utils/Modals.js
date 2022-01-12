@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { Button, Form, Modal } from "react-bootstrap";
 import { TodoContext } from "../contexts/TodoContext";
 
@@ -28,7 +28,7 @@ const Modals = ({ data, isModalShow, ...props }) => {
                 <p className="m-0 fw-bold">Deskripsi:</p>
                 <p> {data.description} </p>
                 <p className="fw-bold">
-                    Status: {data.status == 0 
+                    Status: {data.status === 0 
                     ? <span className="bg-secondary text-white p-1 fw-normal">Belum selesai</span> 
                     : <span className="bg-success text-white p-1 fw-normal">Sudah selesai</span>}
                 </p>
@@ -50,7 +50,7 @@ const Modals = ({ data, isModalShow, ...props }) => {
                     onClick={() => {
                         handleDelete(data && data.id)
                     }}
-                    disabled={data && data.status == 1 ? true : false}
+                    disabled={data && data.status === 1 ? true : false}
                 >
                     Hapus
                 </Button>

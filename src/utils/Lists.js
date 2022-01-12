@@ -8,12 +8,13 @@ const Lists = ({ title, status, onClick, onChangeStatus, ...props }) => {
             role="button"
             {...props}
         >
-            {status == 0 ? (
+            {status === 0 ? (
                 <img 
                     src={check}
                     width={14}
                     height={14}
                     onClick={onChangeStatus}
+                    alt="check"
                 />
                 ) : (
                 <img 
@@ -21,6 +22,7 @@ const Lists = ({ title, status, onClick, onChangeStatus, ...props }) => {
                     width={14}
                     height={14}
                     onClick={onChangeStatus}
+                    alt="minus"
                 />
             )}
             &nbsp;
