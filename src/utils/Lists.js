@@ -8,7 +8,7 @@ const Lists = ({ title, status, onClick, onChangeStatus, ...props }) => {
             role="button"
             {...props}
         >
-            {status === 0 ? (
+            {status == 0 ? (
                 <img 
                     src={check}
                     width={14}

@@ -27,10 +27,10 @@ const HomeMiddle = () => {
         handleChangeStatus
     } = todo;
 
-    const isDone = todoList.filter((data) => data.status === 1).sort((a, b) => {
+    const isDone = todoList.filter((data) => data.status == 1).sort((a, b) => {
         return new Date(b.createdAt) - new Date(a.createdAt);
     });
-    const isPending = todoList.filter((data) => data.status === 0).sort((a, b) => {
+    const isPending = todoList.filter((data) => data.status == 0).sort((a, b) => {
         return new Date(a.createdAt) - new Date(b.createdAt);
     });
 

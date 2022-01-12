@@ -50,7 +50,7 @@ const Modals = ({ data, isModalShow, ...props }) => {
                     onClick={() => {
                         handleDelete(data && data.id)
                     }}
-                    disabled={data && data.status === 1 ? true : false}
+                    disabled={data && data.status == 1 ? true : false}
                 >
                     Hapus
                 </Button>
@@ -95,12 +95,13 @@ Modals.Cu = ({ data, isModalShow, hideModal, handleCreate, handleUpdate, handleC
                 {data && (
                     <Form.Group>
                         <Form.Label>Status</Form.Label>
-                        <Form.Control 
-                            type="number" 
-                            placeholder="Status"
+                        <Form.Select 
                             defaultValue={data && data.status}
                             onChange={handleChangeStatus}
-                        />
+                        >
+                            <option value="1">Sudah selesai</option>
+                            <option value="0">Belum selesai</option>
+                        </Form.Select>
                     </Form.Group>
                 )}
             </Modal.Body>
